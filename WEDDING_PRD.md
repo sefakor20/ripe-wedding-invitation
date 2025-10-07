@@ -1,94 +1,81 @@
 # 💍 Product Requirements Document (PRD)
 ## Richard & Peace Wedding Invitation Landing Page
-**Framework:** Laravel 11 + Livewire 3 + Alpine.js + TailwindCSS
 
 ---
 
 ### 🧑‍🤝‍🧑 Project Overview
-Develop a **modern, elegant, and mobile-responsive wedding invitation landing page** for:
+Design and develop a **modern, elegant, and mobile-responsive wedding invitation landing page** for:
 
 - **Groom:** Richard Kwame Bansa  
 - **Bride:** Peace Kafui Anyormi-Kpatsa  
 
-The page should beautifully present their story, event details, RSVP form, and Q&A section while reflecting sophistication, warmth, and love.
+The page should showcase the couple, outline event details, RSVP contacts, and provide gifting and Q&A sections — reflecting sophistication, warmth, and love.
 
 ---
 
 ### 🎯 Objectives
-- Create a clean, interactive, and responsive wedding invitation site.
-- Showcase all event details and instructions in an elegant format.
-- Allow guests to RSVP seamlessly with Livewire.
-- Implement animations and interactivity using Alpine.js.
-- Optimize for both mobile and desktop.
-
----
-
-### ⚙️ Tech Stack
-- **Backend:** Laravel 12  
-- **Frontend:** TailwindCSS + Alpine.js  
-- **Interactivity:** Livewire 3  
-- **Deployment:** Laravel Forge / Shared Hosting / VPS (optional Netlify/Vercel for frontend builds)
-- **Storage:** Local or database for RSVP submissions  
+- Create an aesthetically pleasing digital wedding invitation.
+- Present clear details about the ceremony and reception.
+- Provide RSVP and gift options for guests.
+- Support both desktop and mobile displays.
 
 ---
 
 ### 🎨 Design Requirements
 
 #### Color Palette
-- **Emerald Green:** `#046307` (primary)  
-- **Gold:** `#C5A15C` (accent)  
-- **White:** `#FFFFFF` (background)  
+- **Emerald Green** — Primary color  
+- **Gold** — Accent and highlights  
+- **White** — Background / base color  
 
 #### Typography
-- Headings: *Playfair Display*, *Cormorant Garamond*  
-- Accent font: *Great Vibes* (for names, romantic lines)  
-- Body text: *Lato* or *Poppins*
+- Elegant serif/script fonts: **Playfair Display**, **Great Vibes**, or **Cormorant Garamond**
+- Clean sans-serif fonts: **Poppins** or **Lato** for body text
 
 #### Visual Style
-- Modern and romantic with floral or soft gold patterns.
-- Light animations: fade-in, scroll reveal, hover transitions.
-- Use minimalist white space and soft curves.
-- Ensure readability and accessibility (WCAG 2.1 AA compliant).
+- Modern, minimal, and romantic
+- Subtle animations (fade, slide-in, parallax)
+- Use gold borders, floral accents, and soft lighting
+- Responsive and mobile-first design
 
 ---
 
 ### 🧩 Functional Requirements
 
-#### 1. Cover Section (Hero)
-- Two versions:
-  - **Version A:** Simple cover with couple names and date (no RSVP)
-  - **Version B:** Full-width image with overlay text
-- Elements:
-  - Couple names: *Richard & Peace*
-  - Subtitle: *“Join us as we celebrate our love”*
-  - Location: *Tanyigbe-Etoe, Ho – Volta Region*
-  - Optional: countdown timer (Alpine.js)
-  - Animated scroll-down arrow
+#### 1. Cover Section
+- Two design variations:
+  - **Version A:** Minimal cover with couple names and date (no RSVP)
+  - **Version B:** Full-screen hero image with overlay text
+- Include:
+  - Couple names  
+  - Subheading: “Join us as we celebrate our love”  
+  - Location: *Tanyigbe-Etoe, Ho – Volta Region*  
+  - Animated scroll-down indicator
 
 ---
 
 #### 2. Event Details Section
 - Header: “Our Special Day”
-- Display as timeline or card layout:
-  1. Engagement Ceremony  
-  2. Exchange of Vows  
-  3. Marriage Registry (Private)  
-  4. Reception  
-- Include icons or separators between parts.
-- Optional: Animate each card on scroll (Alpine.js or CSS transitions)
+- Timeline layout or icon-based structure:
+  - **Part 1:** Engagement Ceremony  
+  - **Part 2:** Exchange of Vows  
+  - **Part 3:** Marriage Registry (Private)  
+  - **Part 4:** Reception
+- Display time and venue elegantly with dividers.
 
 ---
 
-#### 3. Dress Code Section
-- Display color swatches for **Emerald Green**, **Gold**, and **White**.
-- Caption: *“Dress to complement our love in these colors.”*
+#### 3. Dress Code
+- Highlight colors: Emerald Green, Gold, and White
+- Show 3 color swatches
+- Text: “Dress to complement our love in these colors.”
 
 ---
 
 #### 4. Ceremony Note
 > “Ceremony is strictly by invitation. While we would love to have you on our guest list, please leave our little nephews and nieces at home for an intimate adults-only event. Please note, your access card will be required for the reception venue.”
 
-- Displayed in cursive font (Great Vibes) or italic serif with gold text.
+Styled with italics or cursive gold text.
 
 ---
 
@@ -96,47 +83,35 @@ The page should beautifully present their story, event details, RSVP form, and Q
 > “The presence and prayers of our family and friends is the greatest gift of all.  
 > However, if you desire to bless us with a gift, we would greatly appreciate any home essential gift and above all, a cash gift.”
 
-- Include two buttons:
-  - **View Gift Registry**
-  - **Send a Cash Gift**
-- Payment info below:
-  - **MTN - 0243493973 - Richard Kwame Bansah**
+Include buttons:
+- **View Gift Registry**
+- **Send a Cash Gift**
 
 ---
 
-#### 6. RSVP Section
-**Livewire Component:** `RsvpForm`
+#### 6. Payment Details
+Display in a card box:
+- **MTN:** 0243493973  
+- **Account Name:** Richard Kwame Bansah  
 
+---
+
+#### 7. RSVP Section
 - Title: “Confirm Your Attendance”
-- Contacts:
+- Display RSVP contacts:
   - Emmanuella Avornyo – 0535624657  
   - Austin Kpatsa – 0531430929  
   - Raphael Sefakor Adinkrah – 0548828183
-- Form fields:
-  - `name` (text)
-  - `phone` (text)
-  - `response` (radio: attending / unable to attend)
-  - `message` (optional text area)
-- Validations:
-  - Name and phone are required.
-  - Phone must be valid Ghanaian format.
-- Show success message after submission.
-- Store submissions in `rsvps` table.
-
-**Table: rsvps**
-| Field | Type | Description |
-|--------|------|-------------|
-| id | BIGINT | Primary key |
-| name | STRING | Guest name |
-| phone | STRING | Contact number |
-| response | ENUM('attending', 'unable_to_attend') | RSVP choice |
-| message | TEXT (nullable) | Optional note |
-| created_at | TIMESTAMP | Submission time |
+- Include RSVP form with:
+  - Name  
+  - Phone  
+  - Attendance (Attending / Unable to Attend)  
+  - Message (optional)
 
 ---
 
-#### 7. Q&A Section (FAQ)
-**Livewire/Alpine Interactive Accordion**
+#### 8. Q&A Section (FAQ)
+Accordion format with the following items:
 
 | Question | Answer |
 |-----------|---------|
@@ -145,75 +120,57 @@ The page should beautifully present their story, event details, RSVP form, and Q
 | **Where should I park?** | Worry Less! |
 | **What should I wear?** | See dress code above. |
 | **Is the wedding indoors or outdoors?** | Our wedding ceremony is outdoors 😁 |
-| **Is it okay to take pictures?** | Yes! Please take photos and share with us later. |
+| **Is it okay to take pictures?** | Yes! Please take photos and share with us on Google Drive to relive the memories. |
 | **Do I have to dance?** | It’s not mandatory, but peer pressure is real. Aunties will drag you! |
 | **Whom should I call with questions?** | Use the RSVP contacts above. |
 | **Is there a gift registry?** | Feel free to check our Registry 😁❤️ and support us in any way you can. |
 
 ---
 
-#### 8. Location Section
-- Embed Google Map to:
-  > **Lawyer Kpatsa Residence, Tanyigbe-Etoe, Ho – Volta Region**
-- Optional: Static map image with “Get Directions” button linking to Google Maps.
+#### 9. Location Section
+Embed Google Map or show a static map image:
+> **Venue:** Lawyer Kpatsa Residence, Tanyigbe-Etoe, Ho – Volta Region
 
 ---
 
-#### 9. Footer
-- Text: *“With love, Richard & Peace ❤️”*
-- Include small social or registry links if available.
+#### 10. Footer
+- Text: “With love, Richard & Peace ❤️”
+- Optionally include registry, RSVP, and location links.
 
 ---
 
-### 🧠 Interactivity Summary
-| Feature | Tool |
-|----------|------|
-| RSVP form | Livewire component |
-| Form validation | Livewire |
-| Form feedback | Alpine transitions |
-| Scroll animations | Alpine + CSS |
-| FAQ accordion | Alpine.js |
-| Countdown timer | Alpine.js (optional) |
-
----
-
-### 📊 Database Tables
-**rsvps**
-| Field | Type | Description |
-|--------|------|-------------|
-| id | BIGINT | Primary key |
-| name | STRING | Guest name |
-| phone | STRING | Guest phone |
-| response | ENUM('attending', 'unable_to_attend') | RSVP status |
-| message | TEXT | Optional message |
-| created_at | TIMESTAMP | Date submitted |
+### ⚙️ Technical Requirements
+- Use **HTML5**, **CSS3 (TailwindCSS preferred)**, and **JS/React/Vue**.
+- Fully responsive and optimized for mobile.
+- Include smooth scroll animations and lazy loading for images.
+- SEO-friendly meta tags (names, date, and location).
+- Optional: deployable as a static page (Netlify, Vercel, etc.)
+- If RSVP is functional, integrate a simple backend endpoint.
 
 ---
 
 ### ✅ Acceptance Criteria
-- All sections match the design and content specified.
-- Responsive on all devices.
-- RSVP form submits and displays success message.
-- FAQ expands and collapses smoothly.
-- Page loads in < 3 seconds on mobile.
-- Clean, semantic HTML with Tailwind classes.
+- Page adheres to defined palette and typography.
+- All sections display correctly on mobile and desktop.
+- RSVP form validates and submits correctly.
+- Q&A section collapses/expands smoothly.
+- Load time under 3 seconds on mobile.
 
 ---
 
-## 💻 Implementation Prompt (for ChatGPT or Dev Setup)
+## 💻 Implementation Prompt
 
 > **Prompt:**  
-> Implement the **Richard & Peace Wedding Invitation Landing Page** using **Laravel 11**, **Livewire 3**, **Alpine.js**, and **TailwindCSS**.  
-> Follow the PRD structure:  
-> - Sections: Cover, Event Details, Dress Code, Ceremony Note, Gifting, Payment, RSVP (Livewire), FAQ (Alpine), Location, and Footer.  
-> - Use the color palette: Emerald Green `#046307`, Gold `#C5A15C`, White `#FFFFFF`.  
-> - Include elegant fonts (*Playfair Display*, *Great Vibes*, *Lato*).  
-> - Make the RSVP form functional and store data in `rsvps` table.  
-> - Add soft animations and transitions using Alpine.js.  
-> - Ensure responsive design for mobile and desktop.  
-> - Optimize images, accessibility, and load performance.  
-> - End with a footer that reads: **“With love, Richard & Peace ❤️”**.  
-> - Deliver clean, modular Blade views and Livewire components.
+> Implement the **Richard & Peace Wedding Invitation Landing Page** based on the PRD above.  
+> - Use **TailwindCSS** for styling and **HTML/React/Vue** for structure.  
+> - Include all sections (Cover, Event Details, Dress Code, Ceremony Note, Gifting, Payment, RSVP, FAQ, Location, Footer).  
+> - Use **Emerald Green (#046307)**, **Gold (#C5A15C)**, and **White (#FFFFFF)** as theme colors.  
+> - Typography: *Playfair Display*, *Great Vibes*, *Lato*.  
+> - Include smooth scroll, fade animations, and lazy-loaded images.  
+> - RSVP form should collect name, phone, and attendance response.  
+> - Ensure full accessibility, responsiveness, and clean, modular code.  
+> - Add a footer: “With love, Richard & Peace ❤️”.  
+> - Optimize performance and readability.
 
 ---
 

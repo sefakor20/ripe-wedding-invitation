@@ -13,7 +13,7 @@
                 "/Applications/Herd.app/Contents/Resources/herd-mcp.phar"
             ],
             "env": {
-                "SITE_PATH": "/Users/sefakorsmacbookair/Herd/Products/ripe-wedding-invitation"
+                "SITE_PATH": "/Users/sefakor/Code/Products/ripe-wedding-invitation"
             }
         }
     }
