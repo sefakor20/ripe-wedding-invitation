@@ -3,7 +3,7 @@
         <div x-data="{ open: false }" class="border-b border-gray-200">
             <button
                 @click="open = !open"
-                class="w-full text-left py-4 flex justify-between items-center hover:text-[--color-emerald-primary] transition-colors"
+                class="w-full text-left py-4 flex justify-between items-center hover:text-emerald-primary transition-colors"
             >
                 <span class="font-medium text-lg">{{ $faq['question'] }}</span>
                 <svg

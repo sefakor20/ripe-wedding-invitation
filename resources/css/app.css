@@ -15,3 +15,47 @@
     --color-gold: #C5A15C;
     --color-wedding-white: #FFFFFF;
 }
+
+@layer utilities {
+    .font-cursive {
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .bg-wedding-white {
+        background-color: #FFFFFF;
+    }
+
+    .text-emerald-primary {
+        color: #046307;
+    }
+
+    .bg-emerald-primary {
+        background-color: #046307;
+    }
+
+    .from-emerald-primary {
+        --tw-gradient-from: #046307 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(4 99 7 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .text-gold {
+        color: #C5A15C;
+    }
+
+    .bg-gold {
+        background-color: #C5A15C;
+    }
+
+    .border-gold {
+        border-color: #C5A15C;
+    }
+
+    .hover\:bg-emerald-700:hover {
+        background-color: rgb(4 120 87);
+    }
+
+    .hover\:bg-yellow-600:hover {
+        background-color: rgb(202 138 4);
+    }
+}

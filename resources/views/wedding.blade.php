@@ -6,7 +6,7 @@
     <div class="absolute inset-0 opacity-5">
         <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <pattern id="floral" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                <circle cx="50" cy="50" r="2" fill="currentColor" class="text-[--color-emerald-primary]"/>
+                <circle cx="50" cy="50" r="2" fill="currentColor" class="text-emerald-primary"/>
             </pattern>
             <rect width="100%" height="100%" fill="url(#floral)"/>
         </svg>
@@ -39,13 +39,13 @@
 
             <p class="text-lg text-gray-600 mb-4">Join us as we celebrate our love</p>
 
-            <h1 class="text-7xl md:text-8xl font-cursive text-[--color-emerald-primary] mb-8">
-                Richard <span class="text-[--color-gold]">&</span> Peace
+            <h1 class="text-7xl md:text-8xl font-cursive text-emerald-primary mb-8">
+                Richard <span class="text-gold">&</span> Peace
             </h1>
 
             <div class="space-y-2 text-gray-700">
                 <p class="text-2xl font-serif">Richard Kwame Bansa</p>
-                <p class="text-xl text-[--color-gold]">&</p>
+                <p class="text-xl text-gold">&</p>
                 <p class="text-2xl font-serif">Peace Kafui Anyormi-Kpatsa</p>
             </div>
 
@@ -57,26 +57,26 @@
             <!-- Countdown Timer -->
             <div class="mt-12 flex justify-center gap-8 text-center">
                 <div class="space-y-2">
-                    <div class="text-4xl font-bold text-[--color-emerald-primary]" x-text="days"></div>
+                    <div class="text-4xl font-bold text-emerald-primary" x-text="days"></div>
                     <div class="text-sm text-gray-600 uppercase">Days</div>
                 </div>
                 <div class="space-y-2">
-                    <div class="text-4xl font-bold text-[--color-emerald-primary]" x-text="hours"></div>
+                    <div class="text-4xl font-bold text-emerald-primary" x-text="hours"></div>
                     <div class="text-sm text-gray-600 uppercase">Hours</div>
                 </div>
                 <div class="space-y-2">
-                    <div class="text-4xl font-bold text-[--color-emerald-primary]" x-text="minutes"></div>
+                    <div class="text-4xl font-bold text-emerald-primary" x-text="minutes"></div>
                     <div class="text-sm text-gray-600 uppercase">Minutes</div>
                 </div>
                 <div class="space-y-2">
-                    <div class="text-4xl font-bold text-[--color-emerald-primary]" x-text="seconds"></div>
+                    <div class="text-4xl font-bold text-emerald-primary" x-text="seconds"></div>
                     <div class="text-sm text-gray-600 uppercase">Seconds</div>
                 </div>
             </div>
 
             <!-- Scroll Down Arrow -->
             <div class="mt-16 animate-bounce">
-                <svg class="w-8 h-8 mx-auto text-[--color-gold]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-8 h-8 mx-auto text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
             </div>
@@ -88,7 +88,7 @@
 <section class="py-24 bg-white" id="event-details">
     <div class="container mx-auto px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-5xl font-serif text-center text-[--color-emerald-primary] mb-16"
+            <h2 class="text-5xl font-serif text-center text-emerald-primary mb-16"
                 x-data="{ show: false }"
                 x-intersect="show = true"
                 x-show="show"
@@ -108,7 +108,7 @@
                      x-transition:enter-start="opacity-0 translate-y-8"
                      x-transition:enter-end="opacity-100 translate-y-0">
                     <div class="text-4xl mb-4 text-center">💍</div>
-                    <h3 class="text-2xl font-serif text-[--color-emerald-primary] mb-4 text-center">Engagement Ceremony</h3>
+                    <h3 class="text-2xl font-serif text-emerald-primary mb-4 text-center">Engagement Ceremony</h3>
                     <div class="space-y-2 text-gray-700 text-center">
                         <p class="font-medium">Traditional Engagement</p>
                         <p class="text-sm text-gray-600">Details to be announced</p>
@@ -124,7 +124,7 @@
                      x-transition:enter-start="opacity-0 translate-y-8"
                      x-transition:enter-end="opacity-100 translate-y-0">
                     <div class="text-4xl mb-4 text-center">💒</div>
-                    <h3 class="text-2xl font-serif text-[--color-emerald-primary] mb-4 text-center">Exchange of Vows</h3>
+                    <h3 class="text-2xl font-serif text-emerald-primary mb-4 text-center">Exchange of Vows</h3>
                     <div class="space-y-2 text-gray-700 text-center">
                         <p class="font-medium">Wedding Ceremony</p>
                         <p class="text-sm text-gray-600">Outdoors at the Kpatsa Residence</p>
@@ -140,7 +140,7 @@
                      x-transition:enter-start="opacity-0 translate-y-8"
                      x-transition:enter-end="opacity-100 translate-y-0">
                     <div class="text-4xl mb-4 text-center">📜</div>
-                    <h3 class="text-2xl font-serif text-[--color-emerald-primary] mb-4 text-center">Marriage Registry</h3>
+                    <h3 class="text-2xl font-serif text-emerald-primary mb-4 text-center">Marriage Registry</h3>
                     <div class="space-y-2 text-gray-700 text-center">
                         <p class="font-medium italic">Private Event</p>
                         <p class="text-sm text-gray-600">By invitation only</p>
@@ -156,7 +156,7 @@
                      x-transition:enter-start="opacity-0 translate-y-8"
                      x-transition:enter-end="opacity-100 translate-y-0">
                     <div class="text-4xl mb-4 text-center">🎉</div>
-                    <h3 class="text-2xl font-serif text-[--color-emerald-primary] mb-4 text-center">Reception</h3>
+                    <h3 class="text-2xl font-serif text-emerald-primary mb-4 text-center">Reception</h3>
                     <div class="space-y-2 text-gray-700 text-center">
                         <p class="font-medium">Celebration & Dining</p>
                         <p class="text-sm text-gray-600">Access card required for entry</p>
@@ -171,7 +171,7 @@
 <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
     <div class="container mx-auto px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl font-serif text-[--color-emerald-primary] mb-8"
+            <h2 class="text-5xl font-serif text-emerald-primary mb-8"
                 x-data="{ show: false }"
                 x-intersect="show = true"
                 x-show="show"
@@ -181,7 +181,7 @@
                 Dress Code
             </h2>
 
-            <p class="text-lg font-cursive text-[--color-gold] mb-12 text-2xl"
+            <p class="text-lg font-cursive text-gold mb-12 text-2xl"
                x-data="{ show: false }"
                x-intersect="show = true"
                x-show="show"
@@ -199,12 +199,12 @@
                  x-transition:enter-start="opacity-0 scale-75"
                  x-transition:enter-end="opacity-100 scale-100">
                 <div class="text-center space-y-3">
-                    <div class="w-32 h-32 rounded-full bg-[--color-emerald-primary] shadow-2xl mx-auto border-4 border-white"></div>
+                    <div class="w-32 h-32 rounded-full bg-emerald-primary shadow-2xl mx-auto border-4 border-white"></div>
                     <p class="font-medium text-gray-700">Emerald Green</p>
                     <p class="text-sm text-gray-500">#046307</p>
                 </div>
                 <div class="text-center space-y-3">
-                    <div class="w-32 h-32 rounded-full bg-[--color-gold] shadow-2xl mx-auto border-4 border-white"></div>
+                    <div class="w-32 h-32 rounded-full bg-gold shadow-2xl mx-auto border-4 border-white"></div>
                     <p class="font-medium text-gray-700">Gold</p>
                     <p class="text-sm text-gray-500">#C5A15C</p>
                 </div>
@@ -219,7 +219,7 @@
 </section>
 
 <!-- Ceremony Note Section -->
-<section class="py-24 bg-gradient-to-br from-[--color-emerald-primary] to-emerald-800 text-white">
+<section class="py-24 bg-gradient-to-br from-emerald-primary to-emerald-800 text-white">
     <div class="container mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center"
              x-data="{ show: false }"
@@ -228,7 +228,7 @@
              x-transition:enter="transition ease-out duration-1000"
              x-transition:enter-start="opacity-0 translate-y-8"
              x-transition:enter-end="opacity-100 translate-y-0">
-            <blockquote class="text-xl md:text-2xl font-serif italic text-[--color-gold] leading-relaxed">
+            <blockquote class="text-xl md:text-2xl font-serif italic text-gold leading-relaxed">
                 "Ceremony is strictly by invitation. While we would love to have you on our guest list, please leave our little nephews and nieces at home for an intimate adults-only event. Please note, your access card will be required for the reception venue."
             </blockquote>
         </div>
@@ -261,15 +261,15 @@
                 </p>
 
                 <div class="flex gap-4 justify-center flex-wrap mt-8">
-                    <button class="bg-[--color-emerald-primary] hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <button class="bg-emerald-primary hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         View Gift Registry
                     </button>
-                    <button class="bg-[--color-gold] hover:bg-yellow-600 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <button class="bg-gold hover:bg-yellow-600 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         Send a Cash Gift
                     </button>
                 </div>
 
-                <div class="mt-12 p-6 bg-gray-50 rounded-lg border-2 border-[--color-gold]">
+                <div class="mt-12 p-6 bg-gray-50 rounded-lg border-2 border-gold">
                     <p class="text-sm text-gray-600 mb-2">Mobile Money</p>
                     <p class="text-xl font-medium text-gray-800">MTN - 0243493973</p>
                     <p class="text-gray-600">Richard Kwame Bansah</p>
@@ -305,17 +305,17 @@
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <div class="text-3xl mb-3">📞</div>
                     <p class="font-medium text-gray-800">Emmanuella Avornyo</p>
-                    <p class="text-[--color-emerald-primary] font-medium">0535624657</p>
+                    <p class="text-emerald-primary font-medium">0535624657</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <div class="text-3xl mb-3">📞</div>
                     <p class="font-medium text-gray-800">Austin Kpatsa</p>
-                    <p class="text-[--color-emerald-primary] font-medium">0531430929</p>
+                    <p class="text-emerald-primary font-medium">0531430929</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <div class="text-3xl mb-3">📞</div>
                     <p class="font-medium text-gray-800">Raphael Sefakor Adinkrah</p>
-                    <p class="text-[--color-emerald-primary] font-medium">0548828183</p>
+                    <p class="text-emerald-primary font-medium">0548828183</p>
                 </div>
             </div>
         </div>
@@ -390,7 +390,7 @@
                 <div class="text-center">
                     <a href="https://maps.google.com/?q=Lawyer+Kpatsa+Residence+Tanyigbe-Etoe+Ho+Volta+Region"
                        target="_blank"
-                       class="inline-block bg-[--color-emerald-primary] hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                       class="inline-block bg-emerald-primary hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-medium transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         Get Directions
                     </a>
                 </div>
@@ -400,10 +400,10 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-12 bg-gradient-to-br from-[--color-emerald-primary] to-emerald-800 text-white">
+<footer class="py-12 bg-gradient-to-br from-emerald-primary to-emerald-800 text-white">
     <div class="container mx-auto px-6">
         <div class="text-center space-y-4">
-            <p class="text-3xl font-cursive text-[--color-gold]">With love,</p>
+            <p class="text-3xl font-cursive text-gold">With love,</p>
             <p class="text-2xl font-serif">Richard & Peace ❤️</p>
             <p class="text-sm text-gray-300 mt-8">© {{ date('Y') }} All rights reserved</p>
         </div>
