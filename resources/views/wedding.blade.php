@@ -41,14 +41,15 @@
             </template>
 
             <!-- Logo Badge - Top Center -->
-            <div class="absolute top-24 lg:top-28 left-1/2 transform -translate-x-1/2 z-30">
-                <img src="{{ asset('images/ripe-logo.jpeg') }}" alt="Richard & Peace Logo"
-                    class="w-20 h-20 lg:w-24 lg:h-24 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 ring-offset-2 ring-offset-white/10">
-            </div>
-
             <!-- Elegant Overlay Content on Image -->
-            <div class="absolute inset-0 flex items-center justify-center z-20 p-6 lg:p-12 mt-16 lg:mt-20">
+            <div class="absolute inset-x-0 bottom-0 flex items-end justify-center z-20 p-6 lg:p-12 pb-16 lg:pb-20">
                 <div class="text-center text-white max-w-lg">
+                    <!-- Logo Badge Above Names -->
+                    <div class="flex justify-center mb-6">
+                        <img src="{{ asset('images/ripe-logo.jpeg') }}" alt="Richard & Peace Logo"
+                            class="w-20 h-20 lg:w-24 lg:h-24 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 ring-offset-2 ring-offset-white/10">
+                    </div>
+
                     <!-- Names -->
                     <h1 class="font-cursive text-4xl sm:text-5xl lg:text-6xl mb-5 drop-shadow-2xl leading-tight">
                         Richard <span class="text-gold-300">&</span> Peace
@@ -60,7 +61,7 @@
 
                     <!-- Tagline -->
                     <p class="font-serif text-lg lg:text-2xl text-white/95 drop-shadow-lg mb-6">
-                        Forever Starts November 29th, 2025
+                        #RipeForever2025
                     </p>
 
                     <!-- Wedding Date Badge -->
@@ -134,7 +135,7 @@
                                     const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-
+                            
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -188,9 +189,8 @@
                             <!-- Ceremony -->
                             <div class="flex gap-6 group">
                                 <div class="flex-shrink-0 w-24 text-right">
-                                    <div
-                                        class="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent">
-                                        2:00 PM</div>
+                                    <div class="text-2xl font-bold text-emerald-700">
+                                        Part 1</div>
                                     <div class="text-sm text-gray-500">Nov 8</div>
                                 </div>
                                 <div class="relative flex-1">
@@ -199,19 +199,19 @@
                                     </div>
                                     <div
                                         class="ml-8 bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-gold-200 transition-all">
-                                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Wedding Ceremony</h3>
-                                        <p class="text-gray-600">Join us as we exchange our vows at Madina Rawlings Park
+                                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Engagement ceremony</h3>
+                                        <p class="text-gray-600">
+                                            A joyful gathering to celebrate our commitment with family and friends
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Cocktail Hour -->
+                            <!-- Exchange of vows -->
                             <div class="flex gap-6 group">
                                 <div class="flex-shrink-0 w-24 text-right">
-                                    <div
-                                        class="text-2xl font-bold bg-gradient-to-r from-gold-600 to-gold-700 bg-clip-text text-transparent">
-                                        3:30 PM</div>
+                                    <div class="text-2xl font-bold text-gold-700">
+                                        Part 2</div>
                                 </div>
                                 <div class="relative flex-1">
                                     <div
@@ -219,18 +219,19 @@
                                     </div>
                                     <div
                                         class="ml-8 bg-gradient-to-br from-gold-50 to-white rounded-xl p-6 border border-gold-100 group-hover:shadow-xl group-hover:border-gold-300 transition-all">
-                                        <h3 class="text-xl font-bold text-gold-700 mb-2">Cocktail Hour</h3>
-                                        <p class="text-gray-600">Enjoy drinks and appetizers while we take photos</p>
+                                        <h3 class="text-xl font-bold text-gold-700 mb-2">Exchange of vows</h3>
+                                        <p class="text-gray-600">
+                                            Join us as we exchange our vows
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Reception -->
+                            <!-- Marriage Registry (Private) -->
                             <div class="flex gap-6 group">
                                 <div class="flex-shrink-0 w-24 text-right">
-                                    <div
-                                        class="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent">
-                                        5:00 PM</div>
+                                    <div class="text-2xl font-bold text-emerald-700">
+                                        Part 3</div>
                                 </div>
                                 <div class="relative flex-1">
                                     <div
@@ -238,9 +239,32 @@
                                     </div>
                                     <div
                                         class="ml-8 bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-gold-200 transition-all">
-                                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Reception & Dinner</h3>
-                                        <p class="text-gray-600">Celebrate with us with dinner, dancing, and
-                                            unforgettable memories</p>
+                                        <h3 class="text-xl font-bold text-emerald-800 mb-2">Marriage Registry (Private)
+                                        </h3>
+                                        <p class="text-gray-600">
+                                            Registering our marriage in an intimate ceremony with close family and
+                                            friends
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Reception -->
+                            <div class="flex gap-6 group">
+                                <div class="flex-shrink-0 w-24 text-right">
+                                    <div class="text-2xl font-bold text-gold-700">
+                                        Part 4</div>
+                                </div>
+                                <div class="relative flex-1">
+                                    <div
+                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 ring-4 ring-gold-100 shadow-lg">
+                                    </div>
+                                    <div
+                                        class="ml-8 bg-gradient-to-br from-gold-50 to-white rounded-xl p-6 border border-gold-100 group-hover:shadow-xl group-hover:border-gold-300 transition-all">
+                                        <h3 class="text-xl font-bold text-gold-700 mb-2">Reception</h3>
+                                        <p class="text-gray-600">
+                                            Celebrate with us with dinner, dancing, and unforgettable memories
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -406,45 +430,44 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="mb-14">
-                            <h2
-                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent mb-3">
+                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">
                                 RSVP</h2>
                             <p class="text-gray-600">Please let us know if you'll be joining us</p>
                         </div>
 
                         <div
-                            class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-gold-700 rounded-3xl p-10 shadow-2xl text-white border border-gold-400/30">
-                            <p class="text-lg mb-8 opacity-95">
+                            class="bg-gradient-to-b from-emerald-600 via-emerald-700 to-emerald-800 rounded-3xl p-10 shadow-2xl text-white">
+                            <p class="text-lg mb-8 text-white">
                                 Kindly confirm your attendance by <span class="font-bold">October 25th, 2025</span>
                             </p>
 
                             <div class="space-y-6">
                                 <!-- Call Richard -->
                                 <a href="tel:+233244123456"
-                                    class="block bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-2xl p-6 transition-all group">
+                                    class="block bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-2xl p-6 transition-all group">
                                     <div class="flex items-center justify-center gap-4">
-                                        <svg class="w-8 h-8 text-gold-300" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg class="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
                                             <path
                                                 d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
                                         <div class="text-left">
-                                            <div class="font-semibold text-lg">Call Richard</div>
-                                            <div class="text-white/80">0244 123 456</div>
+                                            <div class="font-semibold text-lg text-white">Call Richard</div>
+                                            <div class="text-white/90">0244 123 456</div>
                                         </div>
                                     </div>
                                 </a>
 
                                 <!-- Call Peace -->
                                 <a href="tel:+233201987654"
-                                    class="block bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-2xl p-6 transition-all group">
+                                    class="block bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-2xl p-6 transition-all group">
                                     <div class="flex items-center justify-center gap-4">
-                                        <svg class="w-8 h-8 text-gold-300" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg class="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
                                             <path
                                                 d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
                                         <div class="text-left">
-                                            <div class="font-semibold text-lg">Call Peace</div>
-                                            <div class="text-white/80">0201 987 654</div>
+                                            <div class="font-semibold text-lg text-white">Call Peace</div>
+                                            <div class="text-white/90">0201 987 654</div>
                                         </div>
                                     </div>
                                 </a>
