@@ -134,7 +134,7 @@
                                     const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-                            
+
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -435,8 +435,8 @@
                             </p>
 
                             <div class="space-y-6">
-                                <!-- Call Richard -->
-                                <a href="tel:+233244123456"
+                                <!-- Call Austin -->
+                                <a href="tel:+233531430929"
                                     class="block bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-2xl p-6 transition-all group">
                                     <div class="flex items-center justify-center gap-4">
                                         <svg class="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
@@ -444,14 +444,14 @@
                                                 d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
                                         <div class="text-left">
-                                            <div class="font-semibold text-lg text-white">Call Richard</div>
-                                            <div class="text-white/90">0244 123 456</div>
+                                            <div class="font-semibold text-lg text-white">Call Austin Kpatsa</div>
+                                            <div class="text-white/90">053 143 0929</div>
                                         </div>
                                     </div>
                                 </a>
 
-                                <!-- Call Peace -->
-                                <a href="tel:+233201987654"
+                                <!-- Call Emmanuella -->
+                                <a href="tel:+233535624657"
                                     class="block bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-2xl p-6 transition-all group">
                                     <div class="flex items-center justify-center gap-4">
                                         <svg class="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
@@ -459,8 +459,23 @@
                                                 d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
                                         <div class="text-left">
-                                            <div class="font-semibold text-lg text-white">Call Peace</div>
-                                            <div class="text-white/90">0201 987 654</div>
+                                            <div class="font-semibold text-lg text-white">Call Emmanuella Avornyo</div>
+                                            <div class="text-white/90">053 562 4657</div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!-- Call Raphael -->
+                                <a href="tel:+233548828183"
+                                    class="block bg-white/15 hover:bg-white/25 backdrop-blur-sm rounded-2xl p-6 transition-all group">
+                                    <div class="flex items-center justify-center gap-4">
+                                        <svg class="w-8 h-8 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                        </svg>
+                                        <div class="text-left">
+                                            <div class="font-semibold text-lg text-white">Call Raphael Sefakor Adinkrah</div>
+                                            <div class="text-white/90">054 882 8183</div>
                                         </div>
                                     </div>
                                 </a>
@@ -480,9 +495,9 @@
 
                         <div class="text-center mb-14">
                             <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">
-                                Questions & Answers
+                                Q & A
                             </h2>
-                            <p class="text-gray-600">Everything you need to know</p>
+                            <p class="text-gray-600">For all our friends and family who have lots of questions, please check out our Q & A first!</p>
                         </div>
 
                         @livewire('faq-accordion')
