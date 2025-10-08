@@ -41,33 +41,33 @@
             </template>
 
             <!-- Logo Badge - Top Center -->
-            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
+            <div class="absolute top-24 lg:top-28 left-1/2 transform -translate-x-1/2 z-30">
                 <img src="{{ asset('images/ripe-logo.jpeg') }}" alt="Richard & Peace Logo"
-                    class="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 ring-offset-2 ring-offset-white/10">
+                    class="w-20 h-20 lg:w-24 lg:h-24 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 ring-offset-2 ring-offset-white/10">
             </div>
 
             <!-- Elegant Overlay Content on Image -->
-            <div class="absolute inset-0 flex items-center justify-center z-20 p-6 lg:p-12">
+            <div class="absolute inset-0 flex items-center justify-center z-20 p-6 lg:p-12 mt-16 lg:mt-20">
                 <div class="text-center text-white max-w-lg">
                     <!-- Names -->
-                    <h1 class="font-cursive text-5xl sm:text-6xl lg:text-8xl mb-6 drop-shadow-2xl leading-tight">
+                    <h1 class="font-cursive text-4xl sm:text-5xl lg:text-6xl mb-5 drop-shadow-2xl leading-tight">
                         Richard <span class="text-gold-300">&</span> Peace
                     </h1>
 
                     <div
-                        class="h-1 w-32 bg-gradient-to-r from-transparent via-gold-300 to-transparent mx-auto mb-6 shadow-lg">
+                        class="h-1 w-24 bg-gradient-to-r from-transparent via-gold-300 to-transparent mx-auto mb-5 shadow-lg">
                     </div>
 
                     <!-- Tagline -->
-                    <p class="font-serif text-xl lg:text-3xl text-white/95 drop-shadow-lg mb-8">
-                        Forever Starts November 8th, 2025
+                    <p class="font-serif text-lg lg:text-2xl text-white/95 drop-shadow-lg mb-6">
+                        Forever Starts November 29th, 2025
                     </p>
 
                     <!-- Wedding Date Badge -->
                     <div
-                        class="inline-block bg-gradient-to-r from-gold-500/20 to-gold-600/20 backdrop-blur-md border-2 border-gold-300/50 rounded-full px-8 py-3 shadow-2xl">
-                        <p class="text-gold-200 font-semibold text-lg lg:text-xl tracking-wide">
-                            08 • 11 • 2025
+                        class="inline-block bg-gradient-to-r from-gold-500/20 to-gold-600/20 backdrop-blur-md border-2 border-gold-300/50 rounded-full px-6 py-2 shadow-2xl">
+                        <p class="text-gold-200 font-semibold text-base lg:text-lg tracking-wide">
+                            29 • 11 • 2025
                         </p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                                 class="bg-gradient-to-br from-white to-emerald-50 border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
                                 <div
                                     class="text-6xl font-bold bg-gradient-to-br from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-2">
-                                    08</div>
+                                    29</div>
                                 <div class="text-sm uppercase tracking-widest text-gray-600">November</div>
                             </div>
                             <div
@@ -131,10 +131,10 @@
                                     setInterval(() => this.updateCountdown(), 1000);
                                 },
                                 updateCountdown() {
-                                    const wedding = new Date('2025-11-08T14:00:00').getTime();
+                                    const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-                            
+
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
