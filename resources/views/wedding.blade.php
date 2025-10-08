@@ -42,32 +42,33 @@
 
             <!-- Logo Badge - Top Center -->
             <!-- Elegant Overlay Content on Image -->
-            <div class="absolute inset-x-0 bottom-0 flex items-end justify-center z-20 p-6 lg:p-12 pb-16 lg:pb-20">
+            <div class="absolute inset-x-0 bottom-0 flex items-end justify-center z-20 p-4 lg:p-12 pb-8 lg:pb-20">
                 <div class="text-center text-white max-w-lg">
                     <!-- Logo Badge Above Names -->
-                    <div class="flex justify-center mb-6">
+                    <div class="flex justify-center mb-3 lg:mb-6">
                         <img src="{{ asset('images/ripe-logo.jpeg') }}" alt="Richard & Peace Logo"
-                            class="w-20 h-20 lg:w-24 lg:h-24 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 ring-offset-2 ring-offset-white/10">
+                            class="w-12 h-12 lg:w-24 lg:h-24 rounded-full object-cover shadow-2xl ring-2 lg:ring-4 ring-gold-300/70 ring-offset-1 lg:ring-offset-2 ring-offset-white/10">
                     </div>
 
                     <!-- Names -->
-                    <h1 class="font-cursive text-4xl sm:text-5xl lg:text-6xl mb-5 drop-shadow-2xl leading-tight">
+                    <h1
+                        class="font-cursive text-2xl sm:text-3xl lg:text-6xl mb-3 lg:mb-5 drop-shadow-2xl leading-tight">
                         Richard <span class="text-gold-300">&</span> Peace
                     </h1>
 
                     <div
-                        class="h-1 w-24 bg-gradient-to-r from-transparent via-gold-300 to-transparent mx-auto mb-5 shadow-lg">
+                        class="h-0.5 lg:h-1 w-16 lg:w-24 bg-gradient-to-r from-transparent via-gold-300 to-transparent mx-auto mb-3 lg:mb-5 shadow-lg">
                     </div>
 
                     <!-- Tagline -->
-                    <p class="font-serif text-lg lg:text-2xl text-white/95 drop-shadow-lg mb-6">
+                    <p class="font-serif text-sm lg:text-2xl text-white/95 drop-shadow-lg mb-4 lg:mb-6">
                         #RipeForever2025
                     </p>
 
                     <!-- Wedding Date Badge -->
                     <div
-                        class="inline-block bg-gradient-to-r from-gold-500/20 to-gold-600/20 backdrop-blur-md border-2 border-gold-300/50 rounded-full px-6 py-2 shadow-2xl">
-                        <p class="text-gold-200 font-semibold text-base lg:text-lg tracking-wide">
+                        class="inline-block bg-gradient-to-r from-gold-500/20 to-gold-600/20 backdrop-blur-md border border-gold-300/50 lg:border-2 rounded-full px-4 py-1.5 lg:px-6 lg:py-2 shadow-2xl">
+                        <p class="text-gold-200 font-semibold text-sm lg:text-lg tracking-wide">
                             29 • 11 • 2025
                         </p>
                     </div>
