@@ -136,7 +136,7 @@
                                     const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-
+                            
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -558,7 +558,11 @@
                             class="h-px w-32 bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto mb-8">
                         </div>
 
-                        <p class="text-emerald-300 text-sm">&copy; 2025 Richard & Peace Wedding</p>
+                        <p class="text-emerald-300 text-sm mb-2">&copy; 2025 Richard & Peace Wedding</p>
+                        <p class="text-emerald-400 text-xs">
+                            Powered by <a href="https://rcodez.com" target="_blank"
+                                class="text-gold-400 hover:text-gold-300 underline transition-colors">rCodez</a>
+                        </p>
                     </div>
                 </footer>
 
