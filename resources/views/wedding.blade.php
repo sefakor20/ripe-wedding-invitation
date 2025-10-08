@@ -137,7 +137,7 @@
                                     const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-                            
+
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -192,7 +192,7 @@
                                 <div class="flex-shrink-0 w-24 text-right">
                                     <div class="text-2xl font-bold text-emerald-700">
                                         Part 1</div>
-                                    <div class="text-sm text-gray-500">Nov 8</div>
+                                    {{--  <div class="text-sm text-gray-500">Nov 8</div>  --}}
                                 </div>
                                 <div class="relative flex-1">
                                     <div
