@@ -40,21 +40,15 @@
                 </div>
             </template>
 
+            <!-- Logo Badge - Top Center -->
+            <div class="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
+                <img src="{{ asset('images/ripe-logo.jpeg') }}" alt="Richard & Peace Logo"
+                    class="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 ring-offset-2 ring-offset-white/10">
+            </div>
+
             <!-- Elegant Overlay Content on Image -->
             <div class="absolute inset-0 flex items-center justify-center z-20 p-6 lg:p-12">
                 <div class="text-center text-white max-w-lg">
-                    <!-- Decorative Heart Icon -->
-                    <div class="mb-8 animate-pulse">
-                        <svg class="w-16 h-16 lg:w-20 lg:h-20 mx-auto text-gold-300 drop-shadow-2xl" fill="currentColor"
-                            viewBox="0 0 20 20">
-                            fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-
-                    <!-- Names -->
                     <!-- Names -->
                     <h1 class="font-cursive text-5xl sm:text-6xl lg:text-8xl mb-6 drop-shadow-2xl leading-tight">
                         Richard <span class="text-gold-300">&</span> Peace
@@ -62,15 +56,17 @@
 
                     <div
                         class="h-1 w-32 bg-gradient-to-r from-transparent via-gold-300 to-transparent mx-auto mb-6 shadow-lg">
-                    </div> <!-- Tagline -->
+                    </div>
+
+                    <!-- Tagline -->
                     <p class="font-serif text-xl lg:text-3xl text-white/95 drop-shadow-lg mb-8">
                         Forever Starts November 8th, 2025
                     </p>
 
                     <!-- Wedding Date Badge -->
                     <div
-                        class="inline-block bg-white/10 backdrop-blur-md border border-white/30 rounded-full px-8 py-3 shadow-2xl">
-                        <p class="text-gold-300 font-semibold text-lg lg:text-xl tracking-wide">
+                        class="inline-block bg-gradient-to-r from-gold-500/20 to-gold-600/20 backdrop-blur-md border-2 border-gold-300/50 rounded-full px-8 py-3 shadow-2xl">
+                        <p class="text-gold-200 font-semibold text-lg lg:text-xl tracking-wide">
                             08 • 11 • 2025
                         </p>
                     </div>
@@ -117,8 +113,7 @@
                             </div>
                             <div
                                 class="bg-gradient-to-br from-white to-gold-50 border-2 border-gold-500 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
-                                <div
-                                    class="text-6xl font-bold bg-gradient-to-br from-gold-600 to-gold-800 bg-clip-text text-transparent mb-2">
+                                <div class="text-6xl font-bold text-gold-700 mb-2">
                                     2025</div>
                                 <div class="text-sm uppercase tracking-widest text-gray-600">Saturday</div>
                             </div>
@@ -139,7 +134,7 @@
                                     const wedding = new Date('2025-11-08T14:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-
+                            
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));

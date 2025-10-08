@@ -21,19 +21,18 @@
     --color-emerald-800: #065f46;
     --color-emerald-900: #064e3b;
 
-    /* Gold color palette */
-    --color-gold: #c5a15c;
-    --color-gold-50: #fefbf3;
-    --color-gold-100: #fdf6e3;
-    --color-gold-200: #fbedc7;
-    --color-gold-300: #f8e3ab;
-    --color-gold-400: #e1c683;
-    --color-gold-500: #c5a15c;
-    --color-gold-600: #b8924d;
-    --color-gold-700: #9a7a41;
-    --color-gold-800: #7d6335;
-    --color-gold-900: #66512b;
-
+    /* Gold color palette - Based on #f4b044 */
+    --color-gold: #f4b044;
+    --color-gold-50: #fef9ed;
+    --color-gold-100: #fdf3d7;
+    --color-gold-200: #fbe7af;
+    --color-gold-300: #f9d887;
+    --color-gold-400: #f6c465;
+    --color-gold-500: #f4b044;
+    --color-gold-600: #d99527;
+    --color-gold-700: #b67c1c;
+    --color-gold-800: #8f6216;
+    --color-gold-900: #6b4a11;
     --color-wedding-white: #ffffff;
 }
 
@@ -92,17 +91,17 @@
     }
 
     .to-gold\/5 {
-        --tw-gradient-to: rgb(197 161 92 / 0.05) var(--tw-gradient-to-position);
+        --tw-gradient-to: rgb(244 176 68 / 0.05) var(--tw-gradient-to-position);
     }
 
     .to-gold\/10 {
-        --tw-gradient-to: rgb(197 161 92 / 0.1) var(--tw-gradient-to-position);
+        --tw-gradient-to: rgb(244 176 68 / 0.1) var(--tw-gradient-to-position);
     }
 
     .from-gold\/10 {
-        --tw-gradient-from: rgb(197 161 92 / 0.1)
+        --tw-gradient-from: rgb(244 176 68 / 0.1)
             var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(197 161 92 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-to: rgb(244 176 68 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
@@ -115,150 +114,146 @@
     }
 
     .border-gold\/20 {
-        border-color: rgb(197 161 92 / 0.2);
+        border-color: rgb(244 176 68 / 0.2);
     }
 
     /* Gold text colors */
     .text-gold {
-        color: #c5a15c;
+        color: #f4b044;
     }
 
     .text-gold-200 {
-        color: #fbedc7;
+        color: #fbe7af;
     }
 
     .text-gold-300 {
-        color: #f8e3ab;
+        color: #f9d887;
     }
 
     .text-gold-400 {
-        color: #e1c683;
+        color: #f6c465;
     }
 
     .text-gold-500 {
-        color: #c5a15c;
+        color: #f4b044;
     }
 
     .text-gold-600 {
-        color: #b8924d;
+        color: #d99527;
     }
 
     .text-gold-700 {
-        color: #9a7a41;
+        color: #b67c1c;
     }
 
     .text-gold-800 {
-        color: #7d6335;
+        color: #8f6216;
     }
 
     .text-gold-900 {
-        color: #66512b;
+        color: #6b4a11;
     }
 
     .text-gold\/90 {
-        color: rgb(197 161 92 / 0.9);
-    }
-
-    /* Gold background colors */
+        color: rgb(244 176 68 / 0.9);
+    } /* Gold background colors */
     .bg-gold {
-        background-color: #c5a15c;
+        background-color: #f4b044;
     }
 
     .bg-gold-50 {
-        background-color: #fefbf3;
+        background-color: #fef9ed;
     }
 
     .bg-gold-100 {
-        background-color: #fdf6e3;
+        background-color: #fdf3d7;
     }
 
     .bg-gold-500 {
-        background-color: #c5a15c;
+        background-color: #f4b044;
     }
 
     .bg-gold-600 {
-        background-color: #b8924d;
+        background-color: #d99527;
     }
 
     .bg-gold-700 {
-        background-color: #9a7a41;
+        background-color: #b67c1c;
     }
 
     /* Gold border colors */
     .border-gold {
-        border-color: #c5a15c;
+        border-color: #f4b044;
     }
 
     .border-gold-100 {
-        border-color: #fdf6e3;
+        border-color: #fdf3d7;
     }
 
     .border-gold-200 {
-        border-color: #fbedc7;
+        border-color: #fbe7af;
     }
 
     .border-gold-300 {
-        border-color: #f8e3ab;
+        border-color: #f9d887;
     }
 
     .border-gold-500 {
-        border-color: #c5a15c;
+        border-color: #f4b044;
     }
 
     /* Gold ring colors */
     .ring-gold-100 {
-        --tw-ring-color: #fdf6e3;
-    }
-
-    /* Gold gradient stops */
+        --tw-ring-color: #fdf3d7;
+    } /* Gold gradient stops */
     .from-gold-500 {
-        --tw-gradient-from: #c5a15c var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(197 161 92 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-from: #f4b044 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(244 176 68 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .from-gold-600 {
-        --tw-gradient-from: #b8924d var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(184 146 77 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-from: #d99527 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(217 149 39 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .from-gold-700 {
-        --tw-gradient-from: #9a7a41 var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(154 122 65 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-from: #b67c1c var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(182 124 28 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .from-gold-900 {
-        --tw-gradient-from: #66512b var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(102 81 43 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-from: #6b4a11 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(107 74 17 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .to-gold-500 {
-        --tw-gradient-to: #c5a15c var(--tw-gradient-to-position);
+        --tw-gradient-to: #f4b044 var(--tw-gradient-to-position);
     }
 
     .to-gold-600 {
-        --tw-gradient-to: #b8924d var(--tw-gradient-to-position);
+        --tw-gradient-to: #d99527 var(--tw-gradient-to-position);
     }
 
     .to-gold-700 {
-        --tw-gradient-to: #9a7a41 var(--tw-gradient-to-position);
+        --tw-gradient-to: #b67c1c var(--tw-gradient-to-position);
     }
 
     .to-gold-800 {
-        --tw-gradient-to: #7d6335 var(--tw-gradient-to-position);
+        --tw-gradient-to: #8f6216 var(--tw-gradient-to-position);
     }
 
     .to-gold-900 {
-        --tw-gradient-to: #66512b var(--tw-gradient-to-position);
+        --tw-gradient-to: #6b4a11 var(--tw-gradient-to-position);
     }
 
     .via-gold-600 {
-        --tw-gradient-to: rgb(184 146 77 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-to: rgb(217 149 39 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from),
-            #b8924d var(--tw-gradient-via-position), var(--tw-gradient-to);
+            #d99527 var(--tw-gradient-via-position), var(--tw-gradient-to);
     }
 
     .via-emerald-600 {
@@ -306,7 +301,7 @@
     }
 
     .hover\:to-gold-700:hover {
-        --tw-gradient-to: #9a7a41 var(--tw-gradient-to-position);
+        --tw-gradient-to: #b67c1c var(--tw-gradient-to-position);
     }
 
     .hover\:from-emerald-700:hover {
