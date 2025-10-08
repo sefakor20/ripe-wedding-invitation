@@ -365,7 +365,9 @@
                         <div class="text-center mb-14">
                             <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">
                                 Registry & Gifts</h2>
-                            <p class="text-gray-600">Your presence is the greatest gift, but if you wish to honor us...
+                            <p class="text-gray-600">The presence and prayers of our family and friends is the greatest
+                                gift of all. However, if you desire to bless us with a gift, we would greatly appreciate
+                                any home essential gift and above all, a cash gift.
                             </p>
                         </div>
 
