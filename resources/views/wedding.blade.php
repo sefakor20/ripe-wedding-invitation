@@ -135,7 +135,7 @@
                                     const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-                            
+
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -510,14 +510,14 @@
                             <h2
                                 class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent mb-3">
                                 Location</h2>
-                            <p class="text-gray-600">Madina Rawlings Park</p>
+                            <p class="text-gray-600">Lawyer Kpatsa Residence, Tanyigbe-Etoe</p>
                         </div>
 
                         <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-gold-100">
                             <!-- Map -->
                             <div class="aspect-[16/9] bg-gray-100">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6827896891346!2d-0.1676!3d5.6837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwNDEnMDEuMyJOIDDCsDE wJzAzLjQiVw!5e0!3m2!1sen!2sgh!4v1234567890"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5!2d0.517228!3d6.690065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDEnMjQuMiJOIDDCsDMxJzAyLjAiRQ!5e0!3m2!1sen!2sgh!4v1234567890"
                                     width="100%" height="100%" style="border:0;" allowfullscreen=""
                                     loading="lazy">
                                 </iframe>
@@ -525,10 +525,11 @@
 
                             <!-- Location Details -->
                             <div class="p-8">
-                                <h3 class="text-2xl font-bold text-emerald-800 mb-4">Madina Rawlings Park</h3>
-                                <p class="text-gray-600 mb-6">A beautiful outdoor venue perfect for our celebration</p>
+                                <h3 class="text-2xl font-bold text-emerald-800 mb-2">Lawyer Kpatsa Residence</h3>
+                                <p class="text-lg text-gray-700 mb-1">Tanyigbe-Etoe, Ho - Volta Region</p>
+                                <p class="text-gray-600 mb-6"></p>
 
-                                <a href="https://maps.google.com/?q=Madina+Rawlings+Park" target="_blank"
+                                <a href="https://maps.google.com/?q=6.690065,0.517228" target="_blank"
                                     class="inline-block bg-gradient-to-r from-emerald-600 to-gold-600 hover:from-emerald-700 hover:to-gold-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all">
                                     Get Directions
                                 </a>
