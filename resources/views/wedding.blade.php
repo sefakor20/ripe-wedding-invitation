@@ -134,7 +134,7 @@
                                     const wedding = new Date('2025-11-29T09:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-
+                            
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -341,21 +341,14 @@
                         </div>
 
                         <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-8">
-                            Ceremony Note</h2>
+                            Ceremony</h2>
 
                         <div class="bg-emerald-50 rounded-3xl p-10 shadow-xl border border-emerald-200">
-                            <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                                Our ceremony will begin promptly at <span class="font-bold text-emerald-700">2:00
-                                    PM</span>.
-                                We kindly ask all guests to arrive by <span class="font-bold text-emerald-700">1:45
-                                    PM</span> to ensure
-                                we can start on time.
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Ceremony is strictly by invitation. While we would love to have you on our guest list,
+                                please leave our little nephews and nieces at home for an intimate adults-only event.
+                                Please note, your access card will be required for the reception venue.
                             </p>
-                            <p class="text-gray-600 italic">
-                                "Love is patient, love is kind... It always protects, always trusts, always hopes,
-                                always perseveres."
-                            </p>
-                            <p class="text-sm text-gray-500 mt-2">- 1 Corinthians 13:4-7</p>
                         </div>
                     </div>
                 </section>
@@ -389,12 +382,12 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </div>
-                                <p class="text-2xl font-mono font-bold text-yellow-800 tracking-wide">0244 123 456</p>
-                                <p class="text-sm text-yellow-700 mt-2">Richard Mensah</p>
+                                <p class="text-2xl font-mono font-bold text-yellow-800 tracking-wide">024 349 3973</p>
+                                <p class="text-sm text-yellow-700 mt-2">Richard Kwame Bansah</p>
                             </div>
 
                             <!-- Telecel Cash -->
-                            <div
+                            {{--  <div
                                 class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                                 <div class="flex items-center justify-between mb-4">
                                     <h3 class="text-xl font-bold text-red-900">Telecel Cash</h3>
@@ -408,14 +401,14 @@
                                 </div>
                                 <p class="text-2xl font-mono font-bold text-red-800 tracking-wide">0201 987 654</p>
                                 <p class="text-sm text-red-700 mt-2">Peace Adjei</p>
-                            </div>
+                            </div>  --}}
                         </div>
                     </div>
                 </section>
 
                 <!-- RSVP Section -->
                 <section id="rsvp"
-                    class="min-h-screen flex items-center justify-center py-20 px-6 lg:px-12 bg-white"
+                    class="min-h-screen flex items-center justify-center py-20 px-6 lg:px-12 bg-emerald-50"
                     x-data="{ show: true }" x-intersect:enter="$dispatch('scroll-section', 'rsvp')">
                     <div class="max-w-2xl mx-auto text-center" x-show="show"
                         x-transition:enter="transition ease-out duration-700"
@@ -474,7 +467,8 @@
                                                 d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                         </svg>
                                         <div class="text-left">
-                                            <div class="font-semibold text-lg text-white">Call Raphael Sefakor Adinkrah</div>
+                                            <div class="font-semibold text-lg text-white">Call Raphael Sefakor Adinkrah
+                                            </div>
                                             <div class="text-white/90">054 882 8183</div>
                                         </div>
                                     </div>
@@ -497,7 +491,8 @@
                             <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">
                                 Q & A
                             </h2>
-                            <p class="text-gray-600">For all our friends and family who have lots of questions, please check out our Q & A first!</p>
+                            <p class="text-gray-600">For all our friends and family who have lots of questions, please
+                                check out our Q & A first!</p>
                         </div>
 
                         @livewire('faq-accordion')
