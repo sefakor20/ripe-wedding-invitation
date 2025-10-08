@@ -8,12 +8,73 @@
     <link rel="icon" type="image/jpeg" href="{{ asset('images/ripe-logo.jpeg') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 </head>
 
-<body class="font-sans antialiased bg-white text-gray-800 overflow-hidden">
+<body class="font-sans antialiased bg-white text-gray-800 overflow-hidden" x-data="{ loading: true, showNav: false }"
+    x-init="setTimeout(() => loading = false, 2000)">
+
+    <!-- Loading Screen -->
+    <div x-show="loading" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 z-50 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 flex items-center justify-center">
+        <div class="text-center">
+            <div class="relative mb-8" x-data="{ pulse: true }" x-init="setInterval(() => pulse = !pulse, 1000)">
+                <img src="{{ asset('images/ripe-logo.jpeg') }}" alt="Loading"
+                    class="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover shadow-2xl ring-4 ring-gold-300/70 mx-auto transition-all duration-1000"
+                    :class="pulse ? 'scale-110 ring-8' : 'scale-100 ring-4'">
+            </div>
+            <h2 class="font-cursive text-3xl lg:text-4xl text-white mb-3">Richard <span class="text-gold-300">&</span>
+                Peace</h2>
+            <div class="flex justify-center gap-2 mt-6">
+                <div class="w-2 h-2 bg-gold-300 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+                <div class="w-2 h-2 bg-gold-300 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+                <div class="w-2 h-2 bg-gold-300 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Navigation (Mobile/Tablet) -->
+    <nav class="fixed top-4 right-4 z-40 lg:hidden" x-show="!loading">
+        <button @click="showNav = !showNav"
+            class="bg-emerald-700 hover:bg-emerald-600 text-white p-3 rounded-full shadow-2xl transition-all hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!showNav">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="showNav" x-cloak>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <div x-show="showNav" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" @click.away="showNav = false" x-cloak
+            class="absolute top-16 right-0 bg-white rounded-2xl shadow-2xl p-4 min-w-[200px] border-2 border-emerald-100">
+            <a href="#hero" @click="showNav = false"
+                class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">Home</a>
+            <a href="#schedule" @click="showNav = false"
+                class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">Schedule</a>
+            <a href="#dress" @click="showNav = false"
+                class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">Dress
+                Code</a>
+            <a href="#rsvp" @click="showNav = false"
+                class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">RSVP</a>
+            <a href="#location" @click="showNav = false"
+                class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">Location</a>
+        </div>
+    </nav>
 
     <!-- Split Screen Layout -->
-    <div class="fixed inset-0 flex flex-col lg:flex-row">
+    <div class="fixed inset-0 flex flex-col lg:flex-row" x-show="!loading"
+        x-transition:enter="transition ease-out duration-700" x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100">
 
         <!-- Left Side - Dynamic Image Gallery (Fixed) -->
         <div class="relative w-full lg:w-[50%] h-[70vh] lg:h-full overflow-hidden" x-data="{
@@ -77,11 +138,33 @@
                 </div>
             </div>
 
-            <!-- Decorative Corner Ornaments -->
-            <div class="absolute top-8 left-8 w-16 h-16 border-t-2 border-l-2 border-gold-400/30 z-20"></div>
-            <div class="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2 border-gold-400/30 z-20"></div>
-            <div class="absolute bottom-8 left-8 w-16 h-16 border-b-2 border-l-2 border-gold-400/30 z-20"></div>
-            <div class="absolute bottom-8 right-8 w-16 h-16 border-b-2 border-r-2 border-gold-400/30 z-20"></div>
+            <!-- Decorative Corner Ornaments with Animation -->
+            <div
+                class="absolute top-8 left-8 w-16 h-16 border-t-2 border-l-2 border-gold-400/30 z-20 transition-all duration-500 hover:border-gold-400/60 hover:w-20 hover:h-20">
+            </div>
+            <div
+                class="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2 border-gold-400/30 z-20 transition-all duration-500 hover:border-gold-400/60 hover:w-20 hover:h-20">
+            </div>
+            <div
+                class="absolute bottom-8 left-8 w-16 h-16 border-b-2 border-l-2 border-gold-400/30 z-20 transition-all duration-500 hover:border-gold-400/60 hover:w-20 hover:h-20">
+            </div>
+            <div
+                class="absolute bottom-8 right-8 w-16 h-16 border-b-2 border-r-2 border-gold-400/30 z-20 transition-all duration-500 hover:border-gold-400/60 hover:w-20 hover:h-20">
+            </div>
+
+            <!-- Decorative Inner Corners -->
+            <div class="absolute top-24 left-24 w-8 h-8 border-t border-l border-gold-400/20 z-20"></div>
+            <div class="absolute top-24 right-24 w-8 h-8 border-t border-r border-gold-400/20 z-20"></div>
+            <div class="absolute bottom-24 left-24 w-8 h-8 border-b border-l border-gold-400/20 z-20"></div>
+            <div class="absolute bottom-24 right-24 w-8 h-8 border-b border-r border-gold-400/20 z-20"></div>
+
+            <!-- Scroll Indicator (Mobile Only) -->
+            <div class="lg:hidden absolute bottom-2 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+                <svg class="w-6 h-6 text-gold-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
         </div>
 
         <!-- Right Side - Scrollable Content -->
@@ -98,24 +181,25 @@
                         x-transition:enter-start="opacity-0 translate-y-10"
                         x-transition:enter-end="opacity-100 translate-y-0">
 
-                        <h2 class="font-cursive text-4xl md:text-6xl text-emerald-700 mb-6 leading-tight">
+                        <h2
+                            class="font-cursive text-4xl md:text-6xl text-emerald-700 mb-6 leading-tight tracking-wide">
                             Join Us</h2>
 
-                        <p class="font-serif text-lg md:text-2xl text-gray-700 mb-12 leading-relaxed">
+                        <p class="font-serif text-lg md:text-2xl text-gray-700 mb-12 leading-relaxed tracking-wide">
                             as we celebrate the beginning of our forever journey together
                         </p>
 
                         <!-- Elegant Date Display -->
                         <div class="flex flex-wrap justify-center gap-6 mb-14">
                             <div
-                                class="bg-gradient-to-br from-white to-emerald-50 border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                                class="bg-gradient-to-br from-white to-emerald-50 border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 hover:border-emerald-700 transition-all duration-300 cursor-default">
                                 <div
                                     class="text-6xl font-bold bg-gradient-to-br from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-2">
                                     29</div>
                                 <div class="text-sm uppercase tracking-widest text-gray-600">November</div>
                             </div>
                             <div
-                                class="bg-white border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                                class="bg-white border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 hover:border-emerald-700 transition-all duration-300 cursor-default">
                                 <div class="text-6xl font-bold text-emerald-700 mb-2">
                                     2025</div>
                                 <div class="text-sm uppercase tracking-widest text-gray-600">Saturday</div>
@@ -169,6 +253,20 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Decorative Section Divider -->
+                <div
+                    class="flex items-center justify-center py-4 bg-gradient-to-r from-emerald-50 via-white to-emerald-50">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-emerald-300"></div>
+                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-emerald-300"></div>
+                    </div>
+                </div>
 
                 <!-- Schedule Section -->
                 <section id="schedule"
@@ -273,6 +371,19 @@
                     </div>
                 </section>
 
+                <!-- Decorative Section Divider -->
+                <div class="flex items-center justify-center py-4 bg-white">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-emerald-300"></div>
+                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-emerald-300"></div>
+                    </div>
+                </div>
+
                 <!-- Dress Code Section -->
                 <section id="dress-code"
                     class="min-h-screen flex items-center justify-center py-20 px-6 lg:px-12 bg-gradient-to-b from-emerald-50 to-white"
@@ -326,6 +437,19 @@
                     </div>
                 </section>
 
+                <!-- Decorative Section Divider -->
+                <div class="flex items-center justify-center py-4 bg-gradient-to-b from-white to-emerald-50">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-emerald-300"></div>
+                        <svg class="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-emerald-300"></div>
+                    </div>
+                </div>
+
                 <!-- Ceremony Note Section -->
                 <section id="ceremony-note"
                     class="min-h-screen flex items-center justify-center py-20 px-6 lg:px-12 bg-white"
@@ -355,6 +479,19 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Decorative Section Divider -->
+                <div class="flex items-center justify-center py-4 bg-emerald-50">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-emerald-300"></div>
+                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-emerald-300"></div>
+                    </div>
+                </div>
 
                 <!-- Registry Section -->
                 <section id="registry"
@@ -411,6 +548,19 @@
                     </div>
                 </section>
 
+                <!-- Decorative Section Divider -->
+                <div class="flex items-center justify-center py-4 bg-white">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-gold-300"></div>
+                        <svg class="w-4 h-4 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-gold-300"></div>
+                    </div>
+                </div>
+
                 <!-- RSVP Section -->
                 <section id="rsvp"
                     class="min-h-screen flex items-center justify-center py-20 px-6 lg:px-12 bg-emerald-50"
@@ -434,8 +584,11 @@
                             <div class="space-y-4 md:space-y-6">
                                 <!-- Call Austin -->
                                 <a href="tel:+233531430929"
-                                    class="block bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-5 md:p-6 transition-all group shadow-lg">
-                                    <div class="flex items-center justify-center gap-4">
+                                    class="block bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-5 md:p-6 transition-all duration-300 group shadow-lg hover:shadow-2xl hover:scale-105 relative overflow-hidden">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700">
+                                    </div>
+                                    <div class="flex items-center justify-center gap-4 relative z-10">
                                         <svg class="w-7 h-7 md:w-8 md:h-8 text-gold-400 flex-shrink-0"
                                             fill="currentColor" viewBox="0 0 20 20">
                                             <path
@@ -451,8 +604,11 @@
 
                                 <!-- Call Emmanuella -->
                                 <a href="tel:+233535624657"
-                                    class="block bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-5 md:p-6 transition-all group shadow-lg">
-                                    <div class="flex items-center justify-center gap-4">
+                                    class="block bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-5 md:p-6 transition-all duration-300 group shadow-lg hover:shadow-2xl hover:scale-105 relative overflow-hidden">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700">
+                                    </div>
+                                    <div class="flex items-center justify-center gap-4 relative z-10">
                                         <svg class="w-7 h-7 md:w-8 md:h-8 text-gold-400 flex-shrink-0"
                                             fill="currentColor" viewBox="0 0 20 20">
                                             <path
@@ -468,8 +624,11 @@
 
                                 <!-- Call Raphael -->
                                 <a href="tel:+233548828183"
-                                    class="block bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-5 md:p-6 transition-all group shadow-lg">
-                                    <div class="flex items-center justify-center gap-4">
+                                    class="block bg-emerald-600 hover:bg-emerald-500 rounded-2xl p-5 md:p-6 transition-all duration-300 group shadow-lg hover:shadow-2xl hover:scale-105 relative overflow-hidden">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700">
+                                    </div>
+                                    <div class="flex items-center justify-center gap-4 relative z-10">
                                         <svg class="w-7 h-7 md:w-8 md:h-8 text-gold-400 flex-shrink-0"
                                             fill="currentColor" viewBox="0 0 20 20">
                                             <path
@@ -487,6 +646,19 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Decorative Section Divider -->
+                <div class="flex items-center justify-center py-4 bg-emerald-50">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-emerald-300"></div>
+                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-emerald-300"></div>
+                    </div>
+                </div>
 
                 <!-- Q&A Section -->
                 <section id="qa"
@@ -508,6 +680,19 @@
                         @livewire('faq-accordion')
                     </div>
                 </section>
+
+                <!-- Decorative Section Divider -->
+                <div class="flex items-center justify-center py-4 bg-white">
+                    <div class="flex items-center gap-3">
+                        <div class="h-px w-12 bg-gradient-to-r from-transparent to-emerald-300"></div>
+                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="h-px w-12 bg-gradient-to-l from-transparent to-emerald-300"></div>
+                    </div>
+                </div>
 
                 <!-- Location Section -->
                 <section id="location"
@@ -541,7 +726,15 @@
                                 <p class="text-gray-600 mb-6"></p>
 
                                 <a href="https://maps.google.com/?q=6.690065,0.517228" target="_blank"
-                                    class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+                                    class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                                    <svg class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
                                     Get Directions
                                 </a>
                             </div>
