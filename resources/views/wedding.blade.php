@@ -86,7 +86,16 @@
     currentLightboxImage: '',
     scrollPosition: 0
 }"
-    x-init="setTimeout(() => loading = false, 2000);
+    x-init="setTimeout(() => {
+        loading = false;
+        setTimeout(() => {
+            musicPlaying = true;
+            $refs.weddingMusic.play().catch(() => {
+                // Autoplay blocked by browser, user will need to click play button
+                musicPlaying = false;
+            });
+        }, 500);
+    }, 2000);
     $watch('scrollPosition', value => showBackToTop = value > 300);">
 
     <!-- Loading Screen -->
