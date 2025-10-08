@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard & Peace - We're Getting Married!</title>
+    <link rel="icon" type="image/jpeg" href="{{ asset('images/ripe-logo.jpeg') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
@@ -15,7 +16,7 @@
     <div class="fixed inset-0 flex flex-col lg:flex-row">
 
         <!-- Left Side - Dynamic Image Gallery (Fixed) -->
-        <div class="relative w-full lg:w-1/2 h-2/5 lg:h-full overflow-hidden" x-data="{
+        <div class="relative w-full lg:w-[50%] h-[70vh] lg:h-full overflow-hidden" x-data="{
             currentImage: 'couple-1.jpg',
             images: {
                 'hero': 'couple-1.jpg',
@@ -84,7 +85,7 @@
         </div>
 
         <!-- Right Side - Scrollable Content -->
-        <div class="w-full lg:w-1/2 h-2/3 lg:h-full overflow-y-auto bg-white">
+        <div class="w-full lg:w-[50%] h-2/3 lg:h-full overflow-y-auto bg-white">
             <div class="min-h-full">
 
                 <!-- Hero Welcome Section -->
