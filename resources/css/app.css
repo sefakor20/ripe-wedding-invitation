@@ -16,10 +16,24 @@
     --color-emerald-primary: #046307;
     --color-emerald-50: #f0fdf4;
     --color-emerald-100: #dcfce7;
+    --color-emerald-600: #059669;
     --color-emerald-700: #047857;
     --color-emerald-800: #065f46;
     --color-emerald-900: #064e3b;
+
+    /* Gold color palette */
     --color-gold: #c5a15c;
+    --color-gold-50: #fefbf3;
+    --color-gold-100: #fdf6e3;
+    --color-gold-200: #fbedc7;
+    --color-gold-300: #f8e3ab;
+    --color-gold-400: #e1c683;
+    --color-gold-500: #c5a15c;
+    --color-gold-600: #b8924d;
+    --color-gold-700: #9a7a41;
+    --color-gold-800: #7d6335;
+    --color-gold-900: #66512b;
+
     --color-wedding-white: #ffffff;
 }
 
@@ -104,20 +118,201 @@
         border-color: rgb(197 161 92 / 0.2);
     }
 
+    /* Gold text colors */
     .text-gold {
         color: #c5a15c;
+    }
+
+    .text-gold-200 {
+        color: #fbedc7;
+    }
+
+    .text-gold-300 {
+        color: #f8e3ab;
+    }
+
+    .text-gold-400 {
+        color: #e1c683;
+    }
+
+    .text-gold-500 {
+        color: #c5a15c;
+    }
+
+    .text-gold-600 {
+        color: #b8924d;
+    }
+
+    .text-gold-700 {
+        color: #9a7a41;
+    }
+
+    .text-gold-800 {
+        color: #7d6335;
+    }
+
+    .text-gold-900 {
+        color: #66512b;
     }
 
     .text-gold\/90 {
         color: rgb(197 161 92 / 0.9);
     }
 
+    /* Gold background colors */
     .bg-gold {
         background-color: #c5a15c;
     }
 
+    .bg-gold-50 {
+        background-color: #fefbf3;
+    }
+
+    .bg-gold-100 {
+        background-color: #fdf6e3;
+    }
+
+    .bg-gold-500 {
+        background-color: #c5a15c;
+    }
+
+    .bg-gold-600 {
+        background-color: #b8924d;
+    }
+
+    .bg-gold-700 {
+        background-color: #9a7a41;
+    }
+
+    /* Gold border colors */
     .border-gold {
         border-color: #c5a15c;
+    }
+
+    .border-gold-100 {
+        border-color: #fdf6e3;
+    }
+
+    .border-gold-200 {
+        border-color: #fbedc7;
+    }
+
+    .border-gold-300 {
+        border-color: #f8e3ab;
+    }
+
+    .border-gold-500 {
+        border-color: #c5a15c;
+    }
+
+    /* Gold ring colors */
+    .ring-gold-100 {
+        --tw-ring-color: #fdf6e3;
+    }
+
+    /* Gold gradient stops */
+    .from-gold-500 {
+        --tw-gradient-from: #c5a15c var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(197 161 92 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-gold-600 {
+        --tw-gradient-from: #b8924d var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(184 146 77 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-gold-700 {
+        --tw-gradient-from: #9a7a41 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(154 122 65 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .from-gold-900 {
+        --tw-gradient-from: #66512b var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(102 81 43 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .to-gold-500 {
+        --tw-gradient-to: #c5a15c var(--tw-gradient-to-position);
+    }
+
+    .to-gold-600 {
+        --tw-gradient-to: #b8924d var(--tw-gradient-to-position);
+    }
+
+    .to-gold-700 {
+        --tw-gradient-to: #9a7a41 var(--tw-gradient-to-position);
+    }
+
+    .to-gold-800 {
+        --tw-gradient-to: #7d6335 var(--tw-gradient-to-position);
+    }
+
+    .to-gold-900 {
+        --tw-gradient-to: #66512b var(--tw-gradient-to-position);
+    }
+
+    .via-gold-600 {
+        --tw-gradient-to: rgb(184 146 77 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from),
+            #b8924d var(--tw-gradient-via-position), var(--tw-gradient-to);
+    }
+
+    .via-emerald-600 {
+        --tw-gradient-to: rgb(5 150 105 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from),
+            #059669 var(--tw-gradient-via-position), var(--tw-gradient-to);
+    }
+
+    /* Gold with opacity */
+    .from-gold-500\/20 {
+        --tw-gradient-from: rgb(197 161 92 / 0.2)
+            var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(197 161 92 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .to-gold-600\/20 {
+        --tw-gradient-to: rgb(184 146 77 / 0.2) var(--tw-gradient-to-position);
+    }
+
+    .border-gold-300\/50 {
+        border-color: rgb(248 227 171 / 0.5);
+    }
+
+    .border-gold-400\/30 {
+        border-color: rgb(225 198 131 / 0.3);
+    }
+
+    .to-gold-50 {
+        --tw-gradient-to: #fefbf3 var(--tw-gradient-to-position);
+    }
+
+    .to-gold-50\/30 {
+        --tw-gradient-to: rgb(254 251 243 / 0.3) var(--tw-gradient-to-position);
+    }
+
+    .via-white {
+        --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from),
+            #ffffff var(--tw-gradient-via-position), var(--tw-gradient-to);
+    }
+
+    .to-white {
+        --tw-gradient-to: #ffffff var(--tw-gradient-to-position);
+    }
+
+    .hover\:to-gold-700:hover {
+        --tw-gradient-to: #9a7a41 var(--tw-gradient-to-position);
+    }
+
+    .hover\:from-emerald-700:hover {
+        --tw-gradient-from: #047857 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(4 120 87 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
     }
 
     .hover\:bg-emerald-700:hover {

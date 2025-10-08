@@ -44,8 +44,9 @@
             <div class="absolute inset-0 flex items-center justify-center z-20 p-6 lg:p-12">
                 <div class="text-center text-white max-w-lg">
                     <!-- Decorative Heart Icon -->
-                    <div class="mb-8">
-                        <svg class="w-16 h-16 lg:w-20 lg:h-20 mx-auto text-gold-400/90 drop-shadow-2xl"
+                    <div class="mb-8 animate-pulse">
+                        <svg class="w-16 h-16 lg:w-20 lg:h-20 mx-auto text-gold-300 drop-shadow-2xl" fill="currentColor"
+                            viewBox="0 0 20 20">
                             fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
@@ -54,14 +55,14 @@
                     </div>
 
                     <!-- Names -->
+                    <!-- Names -->
                     <h1 class="font-cursive text-5xl sm:text-6xl lg:text-8xl mb-6 drop-shadow-2xl leading-tight">
-                        Richard <span class="text-gold-400">&</span> Peace
+                        Richard <span class="text-gold-300">&</span> Peace
                     </h1>
 
-                    <div class="h-px w-32 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-6">
-                    </div>
-
-                    <!-- Tagline -->
+                    <div
+                        class="h-1 w-32 bg-gradient-to-r from-transparent via-gold-300 to-transparent mx-auto mb-6 shadow-lg">
+                    </div> <!-- Tagline -->
                     <p class="font-serif text-xl lg:text-3xl text-white/95 drop-shadow-lg mb-8">
                         Forever Starts November 8th, 2025
                     </p>
@@ -97,7 +98,9 @@
                         x-transition:enter-start="opacity-0 translate-y-10"
                         x-transition:enter-end="opacity-100 translate-y-0">
 
-                        <h2 class="font-cursive text-4xl md:text-6xl text-emerald-800 mb-6 leading-tight">Join Us</h2>
+                        <h2
+                            class="font-cursive text-4xl md:text-6xl bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent mb-6 leading-tight">
+                            Join Us</h2>
 
                         <p class="font-serif text-lg md:text-2xl text-gray-700 mb-12 leading-relaxed">
                             as we celebrate the beginning of our forever journey together
@@ -106,19 +109,23 @@
                         <!-- Elegant Date Display -->
                         <div class="flex flex-wrap justify-center gap-6 mb-14">
                             <div
-                                class="bg-white border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
-                                <div class="text-6xl font-bold text-emerald-700 mb-2">08</div>
+                                class="bg-gradient-to-br from-white to-emerald-50 border-2 border-emerald-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                                <div
+                                    class="text-6xl font-bold bg-gradient-to-br from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-2">
+                                    08</div>
                                 <div class="text-sm uppercase tracking-widest text-gray-600">November</div>
                             </div>
                             <div
-                                class="bg-white border-2 border-gold-500 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
-                                <div class="text-6xl font-bold text-gold-600 mb-2">2025</div>
+                                class="bg-gradient-to-br from-white to-gold-50 border-2 border-gold-500 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                                <div
+                                    class="text-6xl font-bold bg-gradient-to-br from-gold-600 to-gold-800 bg-clip-text text-transparent mb-2">
+                                    2025</div>
                                 <div class="text-sm uppercase tracking-widest text-gray-600">Saturday</div>
                             </div>
                         </div>
 
                         <!-- Live Countdown Timer -->
-                        <div class="bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-3xl p-10 shadow-2xl"
+                        <div class="bg-gradient-to-br from-emerald-700 via-emerald-800 to-gold-700 rounded-3xl p-10 shadow-2xl border border-gold-400/30"
                             x-data="{
                                 days: 0,
                                 hours: 0,
@@ -132,7 +139,7 @@
                                     const wedding = new Date('2025-11-08T14:00:00').getTime();
                                     const now = new Date().getTime();
                                     const distance = wedding - now;
-                            
+
                                     this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
                                     this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                     this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -175,7 +182,9 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="text-center mb-14">
-                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">Our Special Day</h2>
+                            <h2
+                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-gold-600 bg-clip-text text-transparent mb-3">
+                                Our Special Day</h2>
                             <p class="text-gray-600">Timeline of celebrations</p>
                         </div>
 
@@ -184,15 +193,17 @@
                             <!-- Ceremony -->
                             <div class="flex gap-6 group">
                                 <div class="flex-shrink-0 w-24 text-right">
-                                    <div class="text-2xl font-bold text-emerald-700">2:00 PM</div>
+                                    <div
+                                        class="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent">
+                                        2:00 PM</div>
                                     <div class="text-sm text-gray-500">Nov 8</div>
                                 </div>
                                 <div class="relative flex-1">
                                     <div
-                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-emerald-100">
+                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-br from-emerald-600 to-gold-500 ring-4 ring-emerald-100 shadow-lg">
                                     </div>
                                     <div
-                                        class="ml-8 bg-emerald-50 rounded-xl p-6 group-hover:shadow-lg transition-shadow">
+                                        class="ml-8 bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-gold-200 transition-all">
                                         <h3 class="text-xl font-bold text-emerald-800 mb-2">Wedding Ceremony</h3>
                                         <p class="text-gray-600">Join us as we exchange our vows at Madina Rawlings Park
                                         </p>
@@ -203,14 +214,16 @@
                             <!-- Cocktail Hour -->
                             <div class="flex gap-6 group">
                                 <div class="flex-shrink-0 w-24 text-right">
-                                    <div class="text-2xl font-bold text-gold-600">3:30 PM</div>
+                                    <div
+                                        class="text-2xl font-bold bg-gradient-to-r from-gold-600 to-gold-700 bg-clip-text text-transparent">
+                                        3:30 PM</div>
                                 </div>
                                 <div class="relative flex-1">
                                     <div
-                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-gold-500 ring-4 ring-gold-100">
+                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 ring-4 ring-gold-100 shadow-lg">
                                     </div>
                                     <div
-                                        class="ml-8 bg-gold-50 rounded-xl p-6 group-hover:shadow-lg transition-shadow">
+                                        class="ml-8 bg-gradient-to-br from-gold-50 to-white rounded-xl p-6 border border-gold-100 group-hover:shadow-xl group-hover:border-gold-300 transition-all">
                                         <h3 class="text-xl font-bold text-gold-700 mb-2">Cocktail Hour</h3>
                                         <p class="text-gray-600">Enjoy drinks and appetizers while we take photos</p>
                                     </div>
@@ -220,14 +233,16 @@
                             <!-- Reception -->
                             <div class="flex gap-6 group">
                                 <div class="flex-shrink-0 w-24 text-right">
-                                    <div class="text-2xl font-bold text-emerald-700">5:00 PM</div>
+                                    <div
+                                        class="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent">
+                                        5:00 PM</div>
                                 </div>
                                 <div class="relative flex-1">
                                     <div
-                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-emerald-100">
+                                        class="absolute left-0 top-0 w-4 h-4 rounded-full bg-gradient-to-br from-emerald-600 to-gold-500 ring-4 ring-emerald-100 shadow-lg">
                                     </div>
                                     <div
-                                        class="ml-8 bg-emerald-50 rounded-xl p-6 group-hover:shadow-lg transition-shadow">
+                                        class="ml-8 bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-gold-200 transition-all">
                                         <h3 class="text-xl font-bold text-emerald-800 mb-2">Reception & Dinner</h3>
                                         <p class="text-gray-600">Celebrate with us with dinner, dancing, and
                                             unforgettable memories</p>
@@ -248,11 +263,14 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="text-center mb-14">
-                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">Dress Code</h2>
+                            <h2
+                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 via-gold-600 to-emerald-700 bg-clip-text text-transparent mb-3">
+                                Dress Code</h2>
                             <p class="text-gray-600">Elegance in emerald green, gold, and white</p>
                         </div>
 
-                        <div class="bg-white rounded-3xl shadow-2xl p-10">
+                        <div
+                            class="bg-gradient-to-br from-white via-emerald-50/30 to-gold-50/30 rounded-3xl shadow-2xl p-10 border border-gold-100">
                             <p class="text-center text-gray-700 text-lg mb-10 leading-relaxed">
                                 We kindly request our guests to dress in our wedding colors to create a beautiful,
                                 cohesive atmosphere.
@@ -300,15 +318,19 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="mb-8">
-                            <svg class="w-14 h-14 mx-auto text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-14 h-14 mx-auto text-gold-500 drop-shadow-lg" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path
                                     d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zM10 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zM10 7a3 3 0 100 6 3 3 0 000-6zM15.657 5.404a.75.75 0 10-1.06-1.06l-1.061 1.06a.75.75 0 001.06 1.06l1.06-1.06zM6.464 14.596a.75.75 0 10-1.06-1.06l-1.06 1.06a.75.75 0 001.06 1.06l1.06-1.06zM18 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0118 10zM5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 015 10zM14.596 15.657a.75.75 0 001.06-1.06l-1.06-1.061a.75.75 0 10-1.06 1.06l1.06 1.06zM5.404 6.464a.75.75 0 001.06-1.06l-1.06-1.06a.75.75 0 10-1.061 1.06l1.06 1.06z" />
                             </svg>
                         </div>
 
-                        <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-8">Ceremony Note</h2>
+                        <h2
+                            class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent mb-8">
+                            Ceremony Note</h2>
 
-                        <div class="bg-gradient-to-br from-emerald-50 to-gold-50 rounded-3xl p-10 shadow-xl">
+                        <div
+                            class="bg-gradient-to-br from-emerald-50 via-white to-gold-50 rounded-3xl p-10 shadow-xl border border-gold-200">
                             <p class="text-gray-700 text-lg leading-relaxed mb-6">
                                 Our ceremony will begin promptly at <span class="font-bold text-emerald-700">2:00
                                     PM</span>.
@@ -335,7 +357,9 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="text-center mb-14">
-                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">Registry & Gifts</h2>
+                            <h2
+                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-gold-600 via-emerald-700 to-gold-600 bg-clip-text text-transparent mb-3">
+                                Registry & Gifts</h2>
                             <p class="text-gray-600">Your presence is the greatest gift, but if you wish to honor us...
                             </p>
                         </div>
@@ -387,12 +411,14 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="mb-14">
-                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">RSVP</h2>
+                            <h2
+                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent mb-3">
+                                RSVP</h2>
                             <p class="text-gray-600">Please let us know if you'll be joining us</p>
                         </div>
 
                         <div
-                            class="bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-10 shadow-2xl text-white">
+                            class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-gold-700 rounded-3xl p-10 shadow-2xl text-white border border-gold-400/30">
                             <p class="text-lg mb-8 opacity-95">
                                 Kindly confirm your attendance by <span class="font-bold">October 25th, 2025</span>
                             </p>
@@ -442,7 +468,9 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="text-center mb-14">
-                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">Questions & Answers
+                            <h2
+                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 via-gold-600 to-emerald-700 bg-clip-text text-transparent mb-3">
+                                Questions & Answers
                             </h2>
                             <p class="text-gray-600">Everything you need to know</p>
                         </div>
@@ -461,11 +489,13 @@
                         x-transition:enter-end="opacity-100 translate-y-0">
 
                         <div class="text-center mb-14">
-                            <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">Location</h2>
+                            <h2
+                                class="font-cursive text-4xl md:text-5xl bg-gradient-to-r from-emerald-700 to-gold-600 bg-clip-text text-transparent mb-3">
+                                Location</h2>
                             <p class="text-gray-600">Madina Rawlings Park</p>
                         </div>
 
-                        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-gold-100">
                             <!-- Map -->
                             <div class="aspect-[16/9] bg-gray-100">
                                 <iframe
@@ -481,7 +511,7 @@
                                 <p class="text-gray-600 mb-6">A beautiful outdoor venue perfect for our celebration</p>
 
                                 <a href="https://maps.google.com/?q=Madina+Rawlings+Park" target="_blank"
-                                    class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition-all">
+                                    class="inline-block bg-gradient-to-r from-emerald-600 to-gold-600 hover:from-emerald-700 hover:to-gold-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all">
                                     Get Directions
                                 </a>
                             </div>
@@ -490,9 +520,9 @@
                 </section>
 
                 <!-- Footer -->
-                <footer class="bg-emerald-900 text-white py-16 px-6">
+                <footer class="bg-gradient-to-br from-emerald-900 via-emerald-800 to-gold-900 text-white py-16 px-6">
                     <div class="max-w-2xl mx-auto text-center">
-                        <h3 class="font-cursive text-5xl mb-6 text-gold-300">Thank You</h3>
+                        <h3 class="font-cursive text-5xl mb-6 text-gold-200">Thank You</h3>
                         <p class="text-emerald-100 text-lg mb-8">We can't wait to celebrate with you!</p>
 
                         <div
