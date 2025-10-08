@@ -15,7 +15,7 @@
     <div class="fixed inset-0 flex flex-col lg:flex-row">
 
         <!-- Left Side - Dynamic Image Gallery (Fixed) -->
-        <div class="relative w-full lg:w-1/2 h-1/3 lg:h-full overflow-hidden" x-data="{
+        <div class="relative w-full lg:w-1/2 h-2/5 lg:h-full overflow-hidden" x-data="{
             currentImage: 'couple-1.jpg',
             images: {
                 'hero': 'couple-1.jpg',
@@ -34,7 +34,8 @@
             <template x-for="(image, key) in images" :key="key">
                 <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
                     :class="currentImage === image ? 'opacity-100 z-10' : 'opacity-0 z-0'">
-                    <img :src="`/images/${image}`" :alt="key" class="w-full h-full object-cover">
+                    <img :src="`/images/${image}`" :alt="key"
+                        class="w-full h-full object-cover object-center">
                     <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/70 via-emerald-800/60 to-black/70">
                     </div>
                 </div>
