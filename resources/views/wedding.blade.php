@@ -536,7 +536,7 @@
                                         class="ml-8 bg-gradient-to-br from-emerald-50 to-white rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-gold-200 transition-all">
                                         <h3 class="text-xl font-bold text-emerald-800 mb-2">Engagement ceremony</h3>
                                         <p class="text-gray-600">
-                                            A joyful gathering to celebrate our commitment with family and friends
+                                            A joyful gathering to celebrate our commitment with family and friends in the brides house
                                         </p>
                                     </div>
                                 </div>
@@ -559,7 +559,7 @@
                                         class="ml-8 bg-emerald-50 rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-emerald-200 transition-all">
                                         <h3 class="text-xl font-bold text-emerald-800 mb-2">Exchange of vows</h3>
                                         <p class="text-gray-600">
-                                            Join us as we exchange our vows
+                                            Join us as we exchange our vows in an intimate ceremony with you our love ones @ Lawyer Kpatsa Residence.
                                         </p>
                                     </div>
                                 </div>
@@ -583,8 +583,7 @@
                                         <h3 class="text-xl font-bold text-emerald-800 mb-2">Marriage Registry (Private)
                                         </h3>
                                         <p class="text-gray-600">
-                                            Registering our marriage in an intimate ceremony with close family and
-                                            friends
+                                            We will privately register our marriage in an intimate ceremony before celebrating with everyone at the party
                                         </p>
                                     </div>
                                 </div>
@@ -607,7 +606,7 @@
                                         class="ml-8 bg-emerald-50 rounded-xl p-6 border border-emerald-100 group-hover:shadow-xl group-hover:border-emerald-200 transition-all">
                                         <h3 class="text-xl font-bold text-emerald-800 mb-2">Reception</h3>
                                         <p class="text-gray-600">
-                                            Celebrate with us with dinner, dancing, and unforgettable memories
+                                            Celebrate with us with lunch, dancing, and unforgettable memories @ Lawyer Kpatsa Residence as we party till sunset.
                                         </p>
                                     </div>
                                 </div>
@@ -951,7 +950,7 @@
                         <div class="text-center mb-14">
                             <h2 class="font-cursive text-4xl md:text-5xl text-emerald-700 mb-3">
                                 Location</h2>
-                            <p class="text-gray-600">Lawyer Kpatsa Residence, Tanyigbe-Etoe</p>
+                            <p class="text-gray-600">Directions to Lawyer Kpatsa Residence</p>
                         </div>
 
                         <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-emerald-100">
