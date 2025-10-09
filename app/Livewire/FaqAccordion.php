@@ -32,6 +32,10 @@ class FaqAccordion extends Component
                 'answer' => 'Our wedding ceremony is outdoors 😁',
             ],
             [
+                'question' => 'How do I locate the family house?',
+                'answer' => 'Once you get into Tanyibe Etoe, ask of Anyomi Family house, just a stone throw from Laywer Kpatsa\'s house.',
+            ],
+            [
                 'question' => 'Is it okay to take pictures with our phones and cameras during the wedding?',
                 'answer' => 'Yes, please feel free to take photos. We\'d love to see the day through your eyes! Just be present, enjoy the moment, and don\'t forget to add to our Google Drive so we can relive the magic later.',
             ],
