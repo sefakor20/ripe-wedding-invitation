@@ -29,13 +29,13 @@
     </style>
 </head>
 
-<body class="font-sans antialiased bg-gradient-to-br from-rose-50 to-pink-50 text-gray-800 min-h-screen">
+<body class="font-sans antialiased bg-gradient-to-br from-emerald-100 to-emerald-50 text-gray-800 min-h-screen">
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="{{ url('/') }}" class="flex items-center gap-2 text-gray-700 hover:text-rose-600 transition-colors">
+                <a href="{{ url('/') }}" class="flex items-center gap-2 text-gray-700 hover:text-emerald-700 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                     </svg>
@@ -66,7 +66,7 @@
             </div>
 
             <!-- PDF Viewer -->
-            <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-6">
+            <div class="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 sm:p-6 mb-6">
                 <iframe
                     src="{{ asset('storage/RIPE-INVITATION.pdf') }}"
                     class="pdf-viewer"
@@ -74,7 +74,7 @@
                     loading="lazy">
                     <p class="text-center text-gray-600 py-8">
                         Your browser does not support PDF viewing.
-                        <a href="{{ route('program.download') }}" class="text-rose-600 hover:text-rose-700 underline">
+                        <a href="{{ route('program.download') }}" class="text-emerald-700 hover:text-emerald-600 underline">
                             Click here to download the program
                         </a>
                     </p>
@@ -84,7 +84,7 @@
             <!-- Download Button -->
             <div class="flex justify-center">
                 <a href="{{ route('program.download') }}"
-                   class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                   class="inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
@@ -94,14 +94,14 @@
 
             <!-- Additional Info -->
             <div class="mt-12 text-center text-sm text-gray-500">
-                <p>Having trouble viewing the program? <a href="{{ route('program.download') }}" class="text-rose-600 hover:text-rose-700 underline">Download it here</a></p>
+                <p>Having trouble viewing the program? <a href="{{ route('program.download') }}" class="text-emerald-700 hover:text-emerald-600 underline">Download it here</a></p>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 text-sm">
+    <footer class="bg-emerald-800 py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white/90 text-sm">
             <p>&copy; {{ date('Y') }} Richard & Peace. Made with love.</p>
         </div>
     </footer>
