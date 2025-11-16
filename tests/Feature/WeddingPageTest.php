@@ -15,8 +15,8 @@ test('wedding page contains all sections', function () {
     $response->assertSee('Our Special Day');
     $response->assertSee('Dress Code');
     $response->assertSee('Gifts', false);
-    $response->assertSee('Blessings', false);
-    $response->assertSee('Frequently Asked Questions');
+    $response->assertSee('Registry & Gifts', false);
+    $response->assertSee('Q & A', false);
     $response->assertSee('Location');
 });
 

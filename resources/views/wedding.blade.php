@@ -151,6 +151,8 @@
                 class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">RSVP</a>
             <a href="#location" @click="showNav = false"
                 class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">Location</a>
+            <a href="{{ route('program.show') }}"
+                class="block px-4 py-3 text-emerald-700 hover:bg-emerald-50 rounded-lg transition-colors font-semibold">Program</a>
         </div>
     </nav>
 
