@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Storage;
-use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class ProgramController extends Controller
 {
@@ -18,14 +17,14 @@ class ProgramController extends Controller
     /**
      * Download the program PDF.
      */
-    public function download(): StreamedResponse
+    public function download(): BinaryFileResponse
     {
-        $filePath = 'RIPE-INVITATION.pdf';
+        $filePath = public_path('files/RIPE-INVITATION.pdf');
 
-        if (! Storage::disk('public')->exists($filePath)) {
+        if (! file_exists($filePath)) {
             abort(404, 'Program file not found.');
         }
 
-        return Storage::disk('public')->download($filePath, 'RIPE-Wedding-Program.pdf');
+        return response()->download($filePath, 'RIPE-Wedding-Program.pdf');
     }
 }
