@@ -10,8 +10,8 @@ it('displays the program page successfully', function () {
     $response->assertSee('Download Program PDF');
 });
 
-it('has the program PDF file in storage', function () {
-    expect(Storage::disk('public')->exists('RIPE-INVITATION.pdf'))->toBeTrue();
+it('has the program PDF file in public folder', function () {
+    expect(file_exists(public_path('files/RIPE-INVITATION.pdf')))->toBeTrue();
 });
 
 it('allows downloading the program PDF', function () {
@@ -23,14 +23,14 @@ it('allows downloading the program PDF', function () {
 
 it('shows 404 when PDF file does not exist', function () {
     // Temporarily rename the PDF
-    Storage::disk('public')->move('RIPE-INVITATION.pdf', 'RIPE-INVITATION-backup.pdf');
+    rename(public_path('files/RIPE-INVITATION.pdf'), public_path('files/RIPE-INVITATION-backup.pdf'));
 
     $response = $this->get(route('program.download'));
 
     $response->assertNotFound();
 
     // Restore the PDF
-    Storage::disk('public')->move('RIPE-INVITATION-backup.pdf', 'RIPE-INVITATION.pdf');
+    rename(public_path('files/RIPE-INVITATION-backup.pdf'), public_path('files/RIPE-INVITATION.pdf'));
 });
 
 it('includes a back link to the main wedding page', function () {
@@ -46,5 +46,5 @@ it('embeds the PDF in an iframe', function () {
 
     $response->assertSuccessful();
     $response->assertSee('iframe', false);
-    $response->assertSee(asset('storage/RIPE-INVITATION.pdf'));
+    $response->assertSee(asset('files/RIPE-INVITATION.pdf'));
 });

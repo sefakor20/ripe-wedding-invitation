@@ -68,7 +68,7 @@
             <!-- PDF Viewer -->
             <div class="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 sm:p-6 mb-6">
                 <iframe
-                    src="{{ asset('storage/RIPE-INVITATION.pdf') }}"
+                    src="{{ asset('files/RIPE-INVITATION.pdf') }}"
                     class="pdf-viewer"
                     title="Wedding Program PDF"
                     loading="lazy">
